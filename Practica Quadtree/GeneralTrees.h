@@ -231,38 +231,48 @@ public:
 	// In order iterative ----------------------------------
 	void inOrderIterative(DLinkedList<TreeNode<kdata>*>* new_list)
 	{
+		bool work = true;
 		Stack<TreeNode<kdata>*>	new_stack;
-		TreeNode<kdata>*		new_node = &root;
-		unsigned int middle = 0;
-		new_stack.pushBack(new_node);
+		TreeNode<kdata>*		new_node = &root;		
 
-		while (new_node != NULL)
+		while (work)
 		{
-			DListNode<TreeNode<kdata>*>* tmp = new_node->childs.head;
-			unsigned int middle = new_node->childs.count() / 2;
-
-			if (tmp != NULL)
+			if (new_node != NULL)
 			{
-				for (unsigned int i = 0; i < middle; ++i, tmp = tmp->next)
+				if (new_list->find(new_node) == -1)
 				{
-					new_stack.pushBack(tmp->data);
+					new_stack.pushBack(new_node);
 				}
-				new_node = new_node->childs.head->data;
+				if (new_node->childs.count() != 0)
+				{
+					new_node = new_node->childs.head->data;
+				}
+				else
+				{
+					new_node = NULL;
+				}
 			}
 
+			else if (new_stack.count() > 0)
+			{
+				new_stack.pop(new_node);
+				new_list->addNode(new_node);
+				if (new_node->childs.count() != 0)
+				{
+					new_node = new_node->childs.bottom->data;
+				}
+				else
+				{
+					new_node = NULL;
+				}
+			}
 			else
 			{
-				new_list->addNode(new_node);
-				new_stack.pop(new_node);
-				new_node = NULL;
-
-				//new_list->addNode(new_node);
-				//new_stack.pop(new_node);
-				//new_node = tmp->next->data;				
+				work = false;
 			}
 		}
 	}
-
+	
 	void add(const kdata& new_data, const kdata& new_parent)
 	{
 		TreeNode<kdata>* p = root.findRecursive(new_parent);

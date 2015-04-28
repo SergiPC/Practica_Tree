@@ -1,0 +1,21 @@
+
+Sergi Pérez's Code Style:
+
+.- Class: 
+	· PascalCase.
+	· Ex: class PointFloat
+
+.- Methods:
+	· camelCase.
+	· Ex: void distanceTo
+
+.- Variables: 
+	· snake_case.
+	· Ex: char size_vector
+
+
+
+- snake_case
+- camelCase
+- PascalCase
+- Hungarian Notation

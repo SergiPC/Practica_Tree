@@ -40,19 +40,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 			
-			DLinkedList<TreeNode<char>*> list;
-			GTree.preOrderIterative(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.preOrderIterative(&new_list);
 	
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'F');
-			Assert::AreEqual((char)list[1]->data, 'B');
-			Assert::AreEqual((char)list[2]->data, 'A');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'C');
-			Assert::AreEqual((char)list[5]->data, 'E');
-			Assert::AreEqual((char)list[6]->data, 'G');
-			Assert::AreEqual((char)list[7]->data, 'I');
-			Assert::AreEqual((char)list[8]->data, 'H');		
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'F');
+			Assert::AreEqual((char)new_list[1]->data, 'B');
+			Assert::AreEqual((char)new_list[2]->data, 'A');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'C');
+			Assert::AreEqual((char)new_list[5]->data, 'E');
+			Assert::AreEqual((char)new_list[6]->data, 'G');
+			Assert::AreEqual((char)new_list[7]->data, 'I');
+			Assert::AreEqual((char)new_list[8]->data, 'H');		
 		}
 
 		TEST_METHOD(Tree_postOrderIterative)
@@ -68,19 +68,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.postOrderIterative(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.postOrderIterative(&new_list);
 
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'A');
-			Assert::AreEqual((char)list[1]->data, 'C');
-			Assert::AreEqual((char)list[2]->data, 'E');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'B');
-			Assert::AreEqual((char)list[5]->data, 'H');
-			Assert::AreEqual((char)list[6]->data, 'I');
-			Assert::AreEqual((char)list[7]->data, 'G');
-			Assert::AreEqual((char)list[8]->data, 'F');
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'A');
+			Assert::AreEqual((char)new_list[1]->data, 'C');
+			Assert::AreEqual((char)new_list[2]->data, 'E');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'B');
+			Assert::AreEqual((char)new_list[5]->data, 'H');
+			Assert::AreEqual((char)new_list[6]->data, 'I');
+			Assert::AreEqual((char)new_list[7]->data, 'G');
+			Assert::AreEqual((char)new_list[8]->data, 'F');
 		}
 
 		TEST_METHOD(Tree_inOrderIterative)
@@ -96,19 +96,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.inOrderIterative(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.inOrderIterative(&new_list);
 
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'A');
-			Assert::AreEqual((char)list[1]->data, 'B');
-			Assert::AreEqual((char)list[2]->data, 'C');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'E');
-			Assert::AreEqual((char)list[5]->data, 'F');
-			Assert::AreEqual((char)list[6]->data, 'G');
-			Assert::AreEqual((char)list[7]->data, 'I');
-			Assert::AreEqual((char)list[8]->data, 'H');
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'A');
+			Assert::AreEqual((char)new_list[1]->data, 'B');
+			Assert::AreEqual((char)new_list[2]->data, 'C');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'E');
+			Assert::AreEqual((char)new_list[5]->data, 'F');
+			Assert::AreEqual((char)new_list[6]->data, 'H');
+			Assert::AreEqual((char)new_list[7]->data, 'I');
+			Assert::AreEqual((char)new_list[8]->data, 'G');
 		}
 
 		TEST_METHOD(Tree_preOrder)
@@ -124,19 +124,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.preOrderRecursive(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.preOrderRecursive(&new_list);
 
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'F');
-			Assert::AreEqual((char)list[1]->data, 'B');
-			Assert::AreEqual((char)list[2]->data, 'A');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'C');
-			Assert::AreEqual((char)list[5]->data, 'E');
-			Assert::AreEqual((char)list[6]->data, 'G');
-			Assert::AreEqual((char)list[7]->data, 'I');
-			Assert::AreEqual((char)list[8]->data, 'H');
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'F');
+			Assert::AreEqual((char)new_list[1]->data, 'B');
+			Assert::AreEqual((char)new_list[2]->data, 'A');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'C');
+			Assert::AreEqual((char)new_list[5]->data, 'E');
+			Assert::AreEqual((char)new_list[6]->data, 'G');
+			Assert::AreEqual((char)new_list[7]->data, 'I');
+			Assert::AreEqual((char)new_list[8]->data, 'H');
 
 		}
 
@@ -153,19 +153,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.postOrderRecursive(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.postOrderRecursive(&new_list);
 
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'A');
-			Assert::AreEqual((char)list[1]->data, 'C');
-			Assert::AreEqual((char)list[2]->data, 'E');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'B');
-			Assert::AreEqual((char)list[5]->data, 'H');
-			Assert::AreEqual((char)list[6]->data, 'I');
-			Assert::AreEqual((char)list[7]->data, 'G');
-			Assert::AreEqual((char)list[8]->data, 'F');
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'A');
+			Assert::AreEqual((char)new_list[1]->data, 'C');
+			Assert::AreEqual((char)new_list[2]->data, 'E');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'B');
+			Assert::AreEqual((char)new_list[5]->data, 'H');
+			Assert::AreEqual((char)new_list[6]->data, 'I');
+			Assert::AreEqual((char)new_list[7]->data, 'G');
+			Assert::AreEqual((char)new_list[8]->data, 'F');
 		}
 
 		TEST_METHOD(Tree_inOrder)
@@ -181,50 +181,19 @@ namespace UnitTest1
 			GTree.add('I', 'G');
 			GTree.add('H', 'I');
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.inOrderRecursive(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.inOrderRecursive(&new_list);
 
-			Assert::AreEqual((int)list.count(), 9);
-			Assert::AreEqual((char)list[0]->data, 'A');
-			Assert::AreEqual((char)list[1]->data, 'B');
-			Assert::AreEqual((char)list[2]->data, 'C');
-			Assert::AreEqual((char)list[3]->data, 'D');
-			Assert::AreEqual((char)list[4]->data, 'E');
-			Assert::AreEqual((char)list[5]->data, 'F');
-			Assert::AreEqual((char)list[6]->data, 'G');
-			Assert::AreEqual((char)list[7]->data, 'I');
-			Assert::AreEqual((char)list[8]->data, 'H');
-		}
-
-		TEST_METHOD(Tree_gather)
-		{
-			Tree<int> GTree(0);
-
-			GTree.add(100, 0);
-			GTree.add(200, 0);
-			GTree.add(300, 0);
-			GTree.add(101, 100);
-			GTree.add(102, 100);
-			GTree.add(103, 100);
-			GTree.add(210, 200);
-			GTree.add(220, 200);
-			GTree.add(221, 220);
-
-			DLinkedList<TreeNode<int>*> list;
-			GTree.root.gatherAll(&list);
-
-			Assert::AreEqual((int)list.count(), 10);
-			Assert::AreEqual((int)list[0]->data, 0);
-			Assert::AreEqual((int)list[1]->data, 100);
-			Assert::AreEqual((int)list[2]->data, 101);
-			Assert::AreEqual((int)list[3]->data, 102);
-			Assert::AreEqual((int)list[4]->data, 103);
-			Assert::AreEqual((int)list[5]->data, 200);
-			Assert::AreEqual((int)list[6]->data, 210);
-			Assert::AreEqual((int)list[7]->data, 220);
-			Assert::AreEqual((int)list[8]->data, 221);
-			Assert::AreEqual((int)list[9]->data, 300);
-
+			Assert::AreEqual((int)new_list.count(), 9);
+			Assert::AreEqual((char)new_list[0]->data, 'A');
+			Assert::AreEqual((char)new_list[1]->data, 'B');
+			Assert::AreEqual((char)new_list[2]->data, 'C');
+			Assert::AreEqual((char)new_list[3]->data, 'D');
+			Assert::AreEqual((char)new_list[4]->data, 'E');
+			Assert::AreEqual((char)new_list[5]->data, 'F');
+			Assert::AreEqual((char)new_list[6]->data, 'G');
+			Assert::AreEqual((char)new_list[7]->data, 'I');
+			Assert::AreEqual((char)new_list[8]->data, 'H');
 		}
 
 		TEST_METHOD(Tree_clear)
@@ -242,10 +211,10 @@ namespace UnitTest1
 
 			GTree.clear();
 
-			DLinkedList<TreeNode<char>*> list;
-			GTree.root.gatherAll(&list);
+			DLinkedList<TreeNode<char>*> new_list;
+			GTree.root.gatherAll(&new_list);
 
-			Assert::AreEqual((int)list.count(), 1);
+			Assert::AreEqual((int)new_list.count(), 1);
 		}
 
 		TEST_METHOD(Tree_find)
